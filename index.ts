@@ -1,5 +1,7 @@
 import { bubbleSort } from "./src/bubble-sort";
 import { insertionSort } from "./src/insertion-sort";
+import { quickSort } from "./src/quick-sort";
+import { simpleSort } from "./src/simple-sort";
 
 const createRandomInput = () =>
   Array.from({ length: 10 }, () => Math.floor(Math.random() * 100) + 1);
@@ -18,5 +20,6 @@ function test(label: string, sortFn: any) {
   console.groupEnd();
 }
 
+test("Simple Sort", simpleSort);
 test("Insertion Sort", insertionSort);
 test("Bubble Sort", bubbleSort);
